@@ -44,7 +44,8 @@ app.get('/production', async(request, response) => {
     try{
         const control = await Control.find()
 
-        response.json(control[0])
+        //response.json(control[0])
+        response.json({isnow: true})
         
     }catch(e){
         response.json({message: e})
